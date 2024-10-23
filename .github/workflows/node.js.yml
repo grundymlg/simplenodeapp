@@ -22,3 +22,11 @@ jobs:
         LAST_NAME: Grundy
       run: |
         echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+    - name: My second step
+      if: success()
+      run: echo "The previous step has finished successfully"
+    - name: My third step
+      uses: actions/checkout@v1
+      with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/ # if your publishing your package to npm or github package repo
