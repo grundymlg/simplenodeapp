@@ -13,9 +13,6 @@ jobs:
       matrix:
         os: [macos-latest, windows-latest, ubuntu-latest]
         node-version: [12.x, 14.x, 16.x]
-        exclude:
-          - os: macos-latest
-            node-version: 12.x
     steps:
     - name: My first step
       env:
